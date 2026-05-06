@@ -1,4 +1,4 @@
-# cdp-perf-test-suite-template
+# pafs-perfsuit
 
 A JMeter based test runner for the CDP Platform.
 
