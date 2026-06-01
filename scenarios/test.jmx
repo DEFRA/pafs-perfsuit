@@ -3386,12 +3386,12 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T06_UploadProjectAreaShapefile" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T06_UploadProjectAreaShapefile">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="007 /upload-and-scan/8c3705b1-dbb5-4541-bf72-481acf780e67" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="007 /upload-and-scan/8c3705b1-dbb5-4541-bf72-481acf780e67">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/upload-and-scan/${C_fileupload}</stringProp>
@@ -3399,9 +3399,9 @@
             <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
             <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
               <collectionProp name="HTTPFileArgs.files">
-                <elementProp name="TestData/gb_shp.zip" elementType="HTTPFileArg">
+                <elementProp name="gb_shp.zip" elementType="HTTPFileArg">
                   <stringProp name="File.mimetype">application/zip</stringProp>
-                  <stringProp name="File.path">TestData/gb_shp.zip</stringProp>
+                  <stringProp name="File.path">gb_shp.zip</stringProp>
                   <stringProp name="File.paramname">file</stringProp>
                 </elementProp>
               </collectionProp>
