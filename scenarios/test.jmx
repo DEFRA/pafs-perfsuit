@@ -18690,9 +18690,9 @@
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S03_AutoUserCreation">
         <intProp name="ThreadGroup.num_threads">2</intProp>
-        <intProp name="ThreadGroup.ramp_time">20</intProp>
+        <intProp name="ThreadGroup.ramp_time">0</intProp>
         <longProp name="ThreadGroup.duration">4280</longProp>
-        <longProp name="ThreadGroup.delay">640</longProp>
+        <longProp name="ThreadGroup.delay">0</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -18702,7 +18702,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="V_SCHEME" elementType="Argument">
               <stringProp name="Argument.name">V_SCHEME</stringProp>
@@ -18727,7 +18727,7 @@
           </collectionProp>
         </Arguments>
         <hashTree/>
-        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults">
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
           <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
           <stringProp name="HTTPSampler.port">${V_PORT}</stringProp>
           <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
@@ -18737,22 +18737,22 @@
           <stringProp name="HTTPSampler.implementation"></stringProp>
         </ConfigTestElement>
         <hashTree/>
-        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager">
+        <CookieManager guiclass="CookiePanel" testclass="CookieManager" testname="HTTP Cookie Manager" enabled="true">
           <collectionProp name="CookieManager.cookies"/>
           <boolProp name="CookieManager.clearEachIteration">true</boolProp>
           <boolProp name="CookieManager.controlledByThreadGroup">false</boolProp>
         </CookieManager>
         <hashTree/>
-        <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager">
+        <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="true">
           <boolProp name="clearEachIteration">true</boolProp>
           <boolProp name="useExpires">true</boolProp>
           <boolProp name="CacheManager.controlledByThread">false</boolProp>
         </CacheManager>
         <hashTree/>
-        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding"></stringProp>
-          <stringProp name="filename">TestData\S03_Credentials.csv</stringProp>
+          <stringProp name="filename">C:/Users/an000011/OneDrive - Defra/Desktop/PAFS/TestScripts/S03_AutoUserCreation/S03_Credentials.csv</stringProp>
           <boolProp name="ignoreFirstLine">false</boolProp>
           <boolProp name="quotedData">false</boolProp>
           <boolProp name="recycle">true</boolProp>
@@ -18761,12 +18761,12 @@
           <stringProp name="variableNames">P_S03Username,P_S03Password</stringProp>
         </CSVDataSet>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S03_AutoUserCreation_T01_Launch">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S03_AutoUserCreation_T01_Launch" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="001 /login">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="001 /login" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/login</stringProp>
@@ -18860,25 +18860,25 @@
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">5000</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">1000</stringProp>
+              <stringProp name="RandomTimer.range">100</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
-          <intProp name="ActionProcessor.action">1</intProp>
-          <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
-        </TestAction>
-        <hashTree>
-          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-            <stringProp name="ConstantTimer.delay">1000</stringProp>
-            <stringProp name="RandomTimer.range">100</stringProp>
-          </UniformRandomTimer>
-          <hashTree/>
-        </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S03_AutoUserCreation_T02_Login">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S03_AutoUserCreation_T02_Login" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="002 /login">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="002 /login" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/login</stringProp>
@@ -18990,7 +18990,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="003 /admin/journey-selection" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="003 /admin/journey-selection" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/admin/journey-selection</stringProp>
@@ -19082,117 +19082,25 @@
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="003 /admin/users/active">
-            <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
-            <stringProp name="HTTPSampler.path">/admin/users/active</stringProp>
-            <stringProp name="HTTPSampler.method">GET</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments"/>
-            </elementProp>
-          </HTTPSamplerProxy>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">5000</stringProp>
+          </TestAction>
           <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-              <collectionProp name="HeaderManager.headers">
-                <elementProp name="accept" elementType="Header">
-                  <stringProp name="Header.name">accept</stringProp>
-                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
-                </elementProp>
-                <elementProp name="accept-encoding" elementType="Header">
-                  <stringProp name="Header.name">accept-encoding</stringProp>
-                  <stringProp name="Header.value">gzip, deflate, br, zstd</stringProp>
-                </elementProp>
-                <elementProp name="accept-language" elementType="Header">
-                  <stringProp name="Header.name">accept-language</stringProp>
-                  <stringProp name="Header.value">en-US,en;q=0.9,en-GB;q=0.8</stringProp>
-                </elementProp>
-                <elementProp name="cache-control" elementType="Header">
-                  <stringProp name="Header.name">cache-control</stringProp>
-                  <stringProp name="Header.value">max-age=0</stringProp>
-                </elementProp>
-                <elementProp name="dnt" elementType="Header">
-                  <stringProp name="Header.name">dnt</stringProp>
-                  <stringProp name="Header.value">1</stringProp>
-                </elementProp>
-                <elementProp name="priority" elementType="Header">
-                  <stringProp name="Header.name">priority</stringProp>
-                  <stringProp name="Header.value">u=0, i</stringProp>
-                </elementProp>
-                <elementProp name="referer" elementType="Header">
-                  <stringProp name="Header.name">referer</stringProp>
-                  <stringProp name="Header.value">https://pafs-portal-frontend.perf-test.cdp-int.defra.cloud/login</stringProp>
-                </elementProp>
-                <elementProp name="sec-ch-ua" elementType="Header">
-                  <stringProp name="Header.name">sec-ch-ua</stringProp>
-                  <stringProp name="Header.value">&quot;Chromium&quot;;v=&quot;148&quot;, &quot;Microsoft Edge&quot;;v=&quot;148&quot;, &quot;Not/A)Brand&quot;;v=&quot;99&quot;</stringProp>
-                </elementProp>
-                <elementProp name="sec-ch-ua-mobile" elementType="Header">
-                  <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
-                  <stringProp name="Header.value">?0</stringProp>
-                </elementProp>
-                <elementProp name="sec-ch-ua-platform" elementType="Header">
-                  <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
-                  <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
-                </elementProp>
-                <elementProp name="sec-fetch-dest" elementType="Header">
-                  <stringProp name="Header.name">sec-fetch-dest</stringProp>
-                  <stringProp name="Header.value">document</stringProp>
-                </elementProp>
-                <elementProp name="sec-fetch-mode" elementType="Header">
-                  <stringProp name="Header.name">sec-fetch-mode</stringProp>
-                  <stringProp name="Header.value">navigate</stringProp>
-                </elementProp>
-                <elementProp name="sec-fetch-site" elementType="Header">
-                  <stringProp name="Header.name">sec-fetch-site</stringProp>
-                  <stringProp name="Header.value">same-origin</stringProp>
-                </elementProp>
-                <elementProp name="sec-fetch-user" elementType="Header">
-                  <stringProp name="Header.name">sec-fetch-user</stringProp>
-                  <stringProp name="Header.value">?1</stringProp>
-                </elementProp>
-                <elementProp name="upgrade-insecure-requests" elementType="Header">
-                  <stringProp name="Header.name">upgrade-insecure-requests</stringProp>
-                  <stringProp name="Header.value">1</stringProp>
-                </elementProp>
-                <elementProp name="user-agent" elementType="Header">
-                  <stringProp name="Header.name">user-agent</stringProp>
-                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0</stringProp>
-                </elementProp>
-              </collectionProp>
-            </HeaderManager>
-            <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-              <collectionProp name="Asserion.test_strings">
-                <stringProp name="-935119955">Manage users</stringProp>
-              </collectionProp>
-              <stringProp name="Assertion.custom_message"></stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-              <boolProp name="Assertion.assume_success">false</boolProp>
-              <intProp name="Assertion.test_type">16</intProp>
-            </ResponseAssertion>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">1000</stringProp>
+              <stringProp name="RandomTimer.range">100</stringProp>
+            </UniformRandomTimer>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time">
-          <intProp name="ActionProcessor.action">1</intProp>
-          <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
-        </TestAction>
-        <hashTree>
-          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-            <stringProp name="ConstantTimer.delay">1000</stringProp>
-            <stringProp name="RandomTimer.range">100</stringProp>
-          </UniformRandomTimer>
-          <hashTree/>
-        </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S03_AutoUserCreation_T03_AdminJourney">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S03_AutoUserCreation_T03_AdminJourney" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="004 /admin/journey-selection" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="004 /admin/journey-selection" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/admin/journey-selection</stringProp>
@@ -19297,7 +19205,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="005 /admin/users" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="005 /admin/users" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/admin/users</stringProp>
@@ -19379,7 +19287,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="006 /admin/users/active" enabled="false">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="006 /admin/users/active" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/admin/users/active</stringProp>
@@ -19471,113 +19379,25 @@
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="004 /admin/user-account">
-            <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
-            <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
-            <stringProp name="HTTPSampler.path">/admin/user-account</stringProp>
-            <stringProp name="HTTPSampler.method">GET</stringProp>
-            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-            <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-              <collectionProp name="Arguments.arguments"/>
-            </elementProp>
-          </HTTPSamplerProxy>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">5000</stringProp>
+          </TestAction>
           <hashTree>
-            <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
-              <collectionProp name="HeaderManager.headers">
-                <elementProp name="accept" elementType="Header">
-                  <stringProp name="Header.name">accept</stringProp>
-                  <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7</stringProp>
-                </elementProp>
-                <elementProp name="accept-encoding" elementType="Header">
-                  <stringProp name="Header.name">accept-encoding</stringProp>
-                  <stringProp name="Header.value">gzip, deflate, br, zstd</stringProp>
-                </elementProp>
-                <elementProp name="accept-language" elementType="Header">
-                  <stringProp name="Header.name">accept-language</stringProp>
-                  <stringProp name="Header.value">en-US,en;q=0.9,en-GB;q=0.8</stringProp>
-                </elementProp>
-                <elementProp name="dnt" elementType="Header">
-                  <stringProp name="Header.name">dnt</stringProp>
-                  <stringProp name="Header.value">1</stringProp>
-                </elementProp>
-                <elementProp name="priority" elementType="Header">
-                  <stringProp name="Header.name">priority</stringProp>
-                  <stringProp name="Header.value">u=0, i</stringProp>
-                </elementProp>
-                <elementProp name="referer" elementType="Header">
-                  <stringProp name="Header.name">referer</stringProp>
-                  <stringProp name="Header.value">https://pafs-portal-frontend.perf-test.cdp-int.defra.cloud/admin/users/active</stringProp>
-                </elementProp>
-                <elementProp name="sec-ch-ua" elementType="Header">
-                  <stringProp name="Header.name">sec-ch-ua</stringProp>
-                  <stringProp name="Header.value">&quot;Chromium&quot;;v=&quot;148&quot;, &quot;Microsoft Edge&quot;;v=&quot;148&quot;, &quot;Not/A)Brand&quot;;v=&quot;99&quot;</stringProp>
-                </elementProp>
-                <elementProp name="sec-ch-ua-mobile" elementType="Header">
-                  <stringProp name="Header.name">sec-ch-ua-mobile</stringProp>
-                  <stringProp name="Header.value">?0</stringProp>
-                </elementProp>
-                <elementProp name="sec-ch-ua-platform" elementType="Header">
-                  <stringProp name="Header.name">sec-ch-ua-platform</stringProp>
-                  <stringProp name="Header.value">&quot;Windows&quot;</stringProp>
-                </elementProp>
-                <elementProp name="sec-fetch-dest" elementType="Header">
-                  <stringProp name="Header.name">sec-fetch-dest</stringProp>
-                  <stringProp name="Header.value">document</stringProp>
-                </elementProp>
-                <elementProp name="sec-fetch-mode" elementType="Header">
-                  <stringProp name="Header.name">sec-fetch-mode</stringProp>
-                  <stringProp name="Header.value">navigate</stringProp>
-                </elementProp>
-                <elementProp name="sec-fetch-site" elementType="Header">
-                  <stringProp name="Header.name">sec-fetch-site</stringProp>
-                  <stringProp name="Header.value">same-origin</stringProp>
-                </elementProp>
-                <elementProp name="sec-fetch-user" elementType="Header">
-                  <stringProp name="Header.name">sec-fetch-user</stringProp>
-                  <stringProp name="Header.value">?1</stringProp>
-                </elementProp>
-                <elementProp name="upgrade-insecure-requests" elementType="Header">
-                  <stringProp name="Header.name">upgrade-insecure-requests</stringProp>
-                  <stringProp name="Header.value">1</stringProp>
-                </elementProp>
-                <elementProp name="user-agent" elementType="Header">
-                  <stringProp name="Header.name">user-agent</stringProp>
-                  <stringProp name="Header.value">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36 Edg/148.0.0.0</stringProp>
-                </elementProp>
-              </collectionProp>
-            </HeaderManager>
-            <hashTree/>
-            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
-              <collectionProp name="Asserion.test_strings">
-                <stringProp name="1632638730">Add new user</stringProp>
-              </collectionProp>
-              <stringProp name="Assertion.custom_message"></stringProp>
-              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
-              <boolProp name="Assertion.assume_success">false</boolProp>
-              <intProp name="Assertion.test_type">16</intProp>
-            </ResponseAssertion>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">1000</stringProp>
+              <stringProp name="RandomTimer.range">100</stringProp>
+            </UniformRandomTimer>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time">
-          <intProp name="ActionProcessor.action">1</intProp>
-          <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
-        </TestAction>
-        <hashTree>
-          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-            <stringProp name="ConstantTimer.delay">1000</stringProp>
-            <stringProp name="RandomTimer.range">100</stringProp>
-          </UniformRandomTimer>
-          <hashTree/>
-        </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S03_AutoUserCreation_T04_AddNewUser">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S03_AutoUserCreation_T04_AddNewUser" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="007 /admin/user-account">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="007 /admin/user-account" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/admin/user-account</stringProp>
@@ -19665,25 +19485,25 @@
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-        </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
-          <intProp name="ActionProcessor.action">1</intProp>
-          <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
-        </TestAction>
-        <hashTree>
-          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-            <stringProp name="ConstantTimer.delay">1000</stringProp>
-            <stringProp name="RandomTimer.range">100</stringProp>
-          </UniformRandomTimer>
-          <hashTree/>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">5000</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">1000</stringProp>
+              <stringProp name="RandomTimer.range">100</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
         </hashTree>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S03_AutoUserCreation_T05_StartNow" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="008/admin/user-account/is-admin">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="008/admin/user-account/is-admin" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/admin/user-account/is-admin</stringProp>
@@ -19771,25 +19591,25 @@
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-        </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
-          <intProp name="ActionProcessor.action">1</intProp>
-          <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
-        </TestAction>
-        <hashTree>
-          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-            <stringProp name="ConstantTimer.delay">1000</stringProp>
-            <stringProp name="RandomTimer.range">100</stringProp>
-          </UniformRandomTimer>
-          <hashTree/>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">5000</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">1000</stringProp>
+              <stringProp name="RandomTimer.range">100</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
         </hashTree>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S03_AutoUserCreation_T06_SelectUserType" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="009 /admin/user-account/is-admin">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="009 /admin/user-account/is-admin" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/admin/user-account/is-admin</stringProp>
@@ -19894,7 +19714,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="010 /admin/user-account/details">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="010 /admin/user-account/details" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/admin/user-account/details</stringProp>
@@ -19986,25 +19806,25 @@
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-        </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
-          <intProp name="ActionProcessor.action">1</intProp>
-          <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
-        </TestAction>
-        <hashTree>
-          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-            <stringProp name="ConstantTimer.delay">1000</stringProp>
-            <stringProp name="RandomTimer.range">100</stringProp>
-          </UniformRandomTimer>
-          <hashTree/>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">5000</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">1000</stringProp>
+              <stringProp name="RandomTimer.range">100</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
         </hashTree>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S03_AutoUserCreation_T07_EnterDetails" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="011 /admin/user-account/details">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="011 /admin/user-account/details" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/admin/user-account/details</stringProp>
@@ -20037,7 +19857,7 @@
                 <elementProp name="email" elementType="HTTPArgument">
                   <boolProp name="HTTPArgument.always_encode">false</boolProp>
                   <stringProp name="Argument.name">email</stringProp>
-                  <stringProp name="Argument.value">perfadmin_${__RandomString(8,abcdefghijklmnopqrstuvwxyz,)}@yopmail.com</stringProp>
+                  <stringProp name="Argument.value">perfadmin${__Random(1,999)}@yopmail.com</stringProp>
                   <stringProp name="Argument.metadata">=</stringProp>
                   <boolProp name="HTTPArgument.use_equals">true</boolProp>
                 </elementProp>
@@ -20123,7 +19943,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="012 /admin/user-account/check-answers">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="012 /admin/user-account/check-answers" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/admin/user-account/check-answers</stringProp>
@@ -20215,25 +20035,25 @@
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-        </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
-          <intProp name="ActionProcessor.action">1</intProp>
-          <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
-        </TestAction>
-        <hashTree>
-          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-            <stringProp name="ConstantTimer.delay">1000</stringProp>
-            <stringProp name="RandomTimer.range">100</stringProp>
-          </UniformRandomTimer>
-          <hashTree/>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">5000</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">1000</stringProp>
+              <stringProp name="RandomTimer.range">100</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
         </hashTree>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S03_AutoUserCreation_T08_ConfirmAndAddUser" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="013 /admin/user-account/check-answers">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="013 /admin/user-account/check-answers" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/admin/user-account/check-answers</stringProp>
@@ -20331,7 +20151,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="014 /admin/users/active">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="014 /admin/users/active" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/admin/users/active</stringProp>
@@ -20423,18 +20243,18 @@
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-        </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
-          <intProp name="ActionProcessor.action">1</intProp>
-          <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
-        </TestAction>
-        <hashTree>
-          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-            <stringProp name="ConstantTimer.delay">1000</stringProp>
-            <stringProp name="RandomTimer.range">100</stringProp>
-          </UniformRandomTimer>
-          <hashTree/>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">5000</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">1000</stringProp>
+              <stringProp name="RandomTimer.range">100</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
         </hashTree>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S03_AutoUserCreation_T09_Logout" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
@@ -20607,56 +20427,19 @@
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
+          <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
+            <intProp name="ActionProcessor.action">1</intProp>
+            <intProp name="ActionProcessor.target">0</intProp>
+            <stringProp name="ActionProcessor.duration">5000</stringProp>
+          </TestAction>
+          <hashTree>
+            <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
+              <stringProp name="ConstantTimer.delay">1000</stringProp>
+              <stringProp name="RandomTimer.range">100</stringProp>
+            </UniformRandomTimer>
+            <hashTree/>
+          </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Think Time" enabled="true">
-          <intProp name="ActionProcessor.action">1</intProp>
-          <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">360000</stringProp>
-        </TestAction>
-        <hashTree>
-          <UniformRandomTimer guiclass="UniformRandomTimerGui" testclass="UniformRandomTimer" testname="Pause" enabled="true">
-            <stringProp name="ConstantTimer.delay">1000</stringProp>
-            <stringProp name="RandomTimer.range">100</stringProp>
-          </UniformRandomTimer>
-          <hashTree/>
-        </hashTree>
-        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree">
-          <boolProp name="ResultCollector.error_logging">false</boolProp>
-          <objProp>
-            <name>saveConfig</name>
-            <value class="SampleSaveConfiguration">
-              <time>true</time>
-              <latency>true</latency>
-              <timestamp>true</timestamp>
-              <success>true</success>
-              <label>true</label>
-              <code>true</code>
-              <message>true</message>
-              <threadName>true</threadName>
-              <dataType>true</dataType>
-              <encoding>false</encoding>
-              <assertions>true</assertions>
-              <subresults>true</subresults>
-              <responseData>false</responseData>
-              <samplerData>false</samplerData>
-              <xml>false</xml>
-              <fieldNames>true</fieldNames>
-              <responseHeaders>false</responseHeaders>
-              <requestHeaders>false</requestHeaders>
-              <responseDataOnError>false</responseDataOnError>
-              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
-              <assertionsResultsToSave>0</assertionsResultsToSave>
-              <bytes>true</bytes>
-              <sentBytes>true</sentBytes>
-              <url>true</url>
-              <threadCounts>true</threadCounts>
-              <idleTime>true</idleTime>
-              <connectTime>true</connectTime>
-            </value>
-          </objProp>
-          <stringProp name="filename"></stringProp>
-        </ResultCollector>
-        <hashTree/>
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S04_GeneralUserCreation" enabled="false">
         <intProp name="ThreadGroup.num_threads">2</intProp>
@@ -22988,7 +22771,7 @@
         </TestAction>
         <hashTree/>
       </hashTree>
-      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
