@@ -5,9 +5,11 @@
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S01_CreateNewProposal">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S01_CreateNewProposal" enabled="false">
         <intProp name="ThreadGroup.num_threads">4</intProp>
         <intProp name="ThreadGroup.ramp_time">40</intProp>
         <longProp name="ThreadGroup.duration">4280</longProp>
@@ -75,7 +77,7 @@
           <stringProp name="variableNames">S01Username,S01Password</stringProp>
         </CSVDataSet>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T01_Launch">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T01_Launch" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
@@ -497,12 +499,12 @@
           <stringProp name="ActionProcessor.duration">5000</stringProp>
         </TestAction>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T04_StartNew">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T04_StartNew" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="005 /project/name">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="005 /project/name" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/project/name</stringProp>
@@ -597,12 +599,12 @@
           <stringProp name="ActionProcessor.duration">5000</stringProp>
         </TestAction>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T05_ProjectNameSave">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T05_ProjectNameSave" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="006 /project/name">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="006 /project/name" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/project/name</stringProp>
@@ -810,7 +812,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
           <stringProp name="ActionProcessor.duration">5000</stringProp>
@@ -1025,7 +1027,7 @@
           <stringProp name="ActionProcessor.duration">5000</stringProp>
         </TestAction>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T07_SelectProjectType">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T07_SelectProjectType" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
@@ -2435,7 +2437,7 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S02_ExistingProposal">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S02_ExistingProposal" enabled="false">
         <intProp name="ThreadGroup.num_threads">68</intProp>
         <intProp name="ThreadGroup.ramp_time">680</intProp>
         <longProp name="ThreadGroup.duration">4280</longProp>
@@ -2491,7 +2493,7 @@
           <boolProp name="CacheManager.controlledByThread">false</boolProp>
         </CacheManager>
         <hashTree/>
-        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding"></stringProp>
           <stringProp name="filename">TestData/S02_Credentials.csv</stringProp>
@@ -3384,12 +3386,12 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T06_UploadProjectAreaShapefile" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T06_UploadProjectAreaShapefile">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="007 /upload-and-scan/8c3705b1-dbb5-4541-bf72-481acf780e67" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="007 /upload-and-scan/8c3705b1-dbb5-4541-bf72-481acf780e67">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/upload-and-scan/${C_fileupload}</stringProp>
@@ -3397,9 +3399,9 @@
             <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
             <elementProp name="HTTPsampler.Files" elementType="HTTPFileArgs">
               <collectionProp name="HTTPFileArgs.files">
-                <elementProp name="C:/Users/an000011/OneDrive - Defra/Desktop/PAFS/TestScripts/gb_shp.zip" elementType="HTTPFileArg">
+                <elementProp name="TestData/gb_shp.zip" elementType="HTTPFileArg">
                   <stringProp name="File.mimetype">application/zip</stringProp>
-                  <stringProp name="File.path">C:/Users/an000011/OneDrive - Defra/Desktop/PAFS/TestScripts/gb_shp.zip</stringProp>
+                  <stringProp name="File.path">TestData/gb_shp.zip</stringProp>
                   <stringProp name="File.paramname">file</stringProp>
                 </elementProp>
               </collectionProp>
@@ -3488,7 +3490,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="008 /project/SWC501E-000A-008A/benefit-area/upload-status" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="008 /project/SWC501E-000A-008A/benefit-area/upload-status">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/project/${P_ProjectName}/benefit-area/upload-status</stringProp>
@@ -3570,7 +3572,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="009 /project/${P_ProjectName}" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="009 /project/${P_ProjectName}">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/project/${P_ProjectName}</stringProp>
@@ -18700,7 +18702,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
+        <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
           <collectionProp name="Arguments.arguments">
             <elementProp name="V_SCHEME" elementType="Argument">
               <stringProp name="Argument.name">V_SCHEME</stringProp>
@@ -18725,7 +18727,7 @@
           </collectionProp>
         </Arguments>
         <hashTree/>
-        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults">
+        <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
           <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
           <stringProp name="HTTPSampler.port">${V_PORT}</stringProp>
           <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
@@ -18747,7 +18749,7 @@
           <boolProp name="CacheManager.controlledByThread">false</boolProp>
         </CacheManager>
         <hashTree/>
-        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding"></stringProp>
           <stringProp name="filename">TestData\S03_Credentials.csv</stringProp>
@@ -19822,7 +19824,7 @@
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="011 /admin/user-account/details">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="011 /admin/user-account/details" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/admin/user-account/details</stringProp>
@@ -20439,7 +20441,7 @@
           <hashTree/>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S04_GeneralUserCreation">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S04_GeneralUserCreation" enabled="false">
         <intProp name="ThreadGroup.num_threads">2</intProp>
         <intProp name="ThreadGroup.ramp_time">20</intProp>
         <longProp name="ThreadGroup.duration">4280</longProp>
@@ -21238,12 +21240,12 @@
           <stringProp name="ActionProcessor.duration">5000</stringProp>
         </TestAction>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S04_GeneralUserCreation_T06_EnterDetails">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S04_GeneralUserCreation_T06_EnterDetails" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="008 /admin/user-account/details">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="008 /admin/user-account/details" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/admin/user-account/details</stringProp>
@@ -22769,7 +22771,7 @@
         </TestAction>
         <hashTree/>
       </hashTree>
-      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report">
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
