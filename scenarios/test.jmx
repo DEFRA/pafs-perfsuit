@@ -5,6 +5,8 @@
       <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
         <collectionProp name="Arguments.arguments"/>
       </elementProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
     </TestPlan>
     <hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S01_CreateNewProposal">
@@ -181,12 +183,12 @@
           <stringProp name="ActionProcessor.duration">5000</stringProp>
         </TestAction>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T02_Login" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T02_Login">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="002 /login" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="002 /login">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/login</stringProp>
@@ -298,7 +300,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="003 /" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="003 /">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/</stringProp>
@@ -2435,7 +2437,7 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S02_ExistingProposal">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S02_ExistingProposal" enabled="false">
         <intProp name="ThreadGroup.num_threads">68</intProp>
         <intProp name="ThreadGroup.ramp_time">680</intProp>
         <longProp name="ThreadGroup.duration">4280</longProp>
@@ -2491,7 +2493,7 @@
           <boolProp name="CacheManager.controlledByThread">false</boolProp>
         </CacheManager>
         <hashTree/>
-        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding"></stringProp>
           <stringProp name="filename">S02_Credentials.csv</stringProp>
@@ -2503,7 +2505,7 @@
           <stringProp name="variableNames">S02Username,S02Password</stringProp>
         </CSVDataSet>
         <hashTree/>
-        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
           <stringProp name="filename">S02_ProjectNames.csv</stringProp>
           <stringProp name="fileEncoding"></stringProp>
           <stringProp name="variableNames">P_ProjectName</stringProp>
@@ -3384,12 +3386,12 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T06_UploadProjectAreaShapefile">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T06_UploadProjectAreaShapefile" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="007 /upload-and-scan/8c3705b1-dbb5-4541-bf72-481acf780e67">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="007 /upload-and-scan/8c3705b1-dbb5-4541-bf72-481acf780e67" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/upload-and-scan/${C_fileupload}</stringProp>
@@ -18686,7 +18688,7 @@
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S03_AutoUserCreation">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S03_AutoUserCreation" enabled="false">
         <intProp name="ThreadGroup.num_threads">2</intProp>
         <intProp name="ThreadGroup.ramp_time">20</intProp>
         <longProp name="ThreadGroup.duration">4280</longProp>
@@ -18742,7 +18744,7 @@
           <boolProp name="CacheManager.controlledByThread">false</boolProp>
         </CacheManager>
         <hashTree/>
-        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding"></stringProp>
           <stringProp name="filename">S03_Credentials.csv</stringProp>
@@ -20434,7 +20436,7 @@
           </hashTree>
         </hashTree>
       </hashTree>
-      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S04_GeneralUserCreation">
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S04_GeneralUserCreation" enabled="false">
         <intProp name="ThreadGroup.num_threads">2</intProp>
         <intProp name="ThreadGroup.ramp_time">20</intProp>
         <longProp name="ThreadGroup.duration">4280</longProp>
@@ -20448,7 +20450,7 @@
         </elementProp>
       </ThreadGroup>
       <hashTree>
-        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding"></stringProp>
           <stringProp name="filename">S04_Credentials.csv</stringProp>
@@ -22764,7 +22766,7 @@
         </TestAction>
         <hashTree/>
       </hashTree>
-      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report">
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
