@@ -12,8 +12,8 @@
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S01_CreateNewProposal">
         <intProp name="ThreadGroup.num_threads">4</intProp>
         <intProp name="ThreadGroup.ramp_time">40</intProp>
-        <longProp name="ThreadGroup.duration">4280</longProp>
-        <longProp name="ThreadGroup.delay">640</longProp>
+        <longProp name="ThreadGroup.duration">900</longProp>
+        <longProp name="ThreadGroup.delay">0</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -65,7 +65,7 @@
           <boolProp name="CacheManager.controlledByThread">false</boolProp>
         </CacheManager>
         <hashTree/>
-        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config">
+        <CSVDataSet guiclass="TestBeanGUI" testclass="CSVDataSet" testname="CSV Data Set Config" enabled="true">
           <stringProp name="delimiter">,</stringProp>
           <stringProp name="fileEncoding"></stringProp>
           <stringProp name="filename">S01_Credentials.csv</stringProp>
@@ -183,12 +183,12 @@
           <stringProp name="ActionProcessor.duration">5000</stringProp>
         </TestAction>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T02_Login">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T02_Login" enabled="true">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="002 /login">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="002 /login" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/login</stringProp>
@@ -300,7 +300,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="003 /">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="003 /" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/</stringProp>
@@ -22766,7 +22766,7 @@
         </TestAction>
         <hashTree/>
       </hashTree>
-      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
