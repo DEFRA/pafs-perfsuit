@@ -12,8 +12,8 @@
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S01_CreateNewProposal">
         <intProp name="ThreadGroup.num_threads">4</intProp>
         <intProp name="ThreadGroup.ramp_time">40</intProp>
-        <longProp name="ThreadGroup.duration">4280</longProp>
-        <longProp name="ThreadGroup.delay">640</longProp>
+        <longProp name="ThreadGroup.duration">4620</longProp>
+        <longProp name="ThreadGroup.delay">1050</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -177,10 +177,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T02_Login" enabled="true">
@@ -393,10 +393,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T03_CreateNewProposal" enabled="true">
@@ -493,10 +493,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T04_StartNew" enabled="true">
@@ -593,10 +593,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T05_ProjectNameSave" enabled="true">
@@ -812,10 +812,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T06_SelectRiskMgmtAuth" enabled="true">
@@ -1021,10 +1021,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T07_SelectProjectType" enabled="true">
@@ -1230,10 +1230,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T08_ProjectIntervention" enabled="true">
@@ -1453,10 +1453,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T09_MostBeniftProjectIntervention" enabled="true">
@@ -1683,10 +1683,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T10_SelectFinYear" enabled="true">
@@ -1899,10 +1899,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T11_SelectFinYearStopSpending" enabled="true">
@@ -2115,10 +2115,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T12_ClickYourProposals" enabled="true">
@@ -2215,10 +2215,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T13_Logout" enabled="true">
@@ -2393,7 +2393,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
           <stringProp name="ActionProcessor.duration">330000</stringProp>
@@ -2439,8 +2439,8 @@
       </hashTree>
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S02_ExistingProposal">
         <intProp name="ThreadGroup.num_threads">68</intProp>
-        <intProp name="ThreadGroup.ramp_time">680</intProp>
-        <longProp name="ThreadGroup.duration">4280</longProp>
+        <intProp name="ThreadGroup.ramp_time">1020</intProp>
+        <longProp name="ThreadGroup.duration">4620</longProp>
         <longProp name="ThreadGroup.delay">0</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
@@ -2605,12 +2605,22 @@
               <stringProp name="RegexExtractor.match_number">1</stringProp>
             </RegexExtractor>
             <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion" enabled="true">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="794833672">I have forgotten my password</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T02_Login" enabled="true">
@@ -2730,7 +2740,7 @@
             </HeaderManager>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="003 /" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="003 /">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/</stringProp>
@@ -2811,20 +2821,30 @@
               </collectionProp>
             </HeaderManager>
             <hashTree/>
+            <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
+              <collectionProp name="Asserion.test_strings">
+                <stringProp name="-1727115244">Your Proposals</stringProp>
+              </collectionProp>
+              <stringProp name="Assertion.custom_message"></stringProp>
+              <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
+              <boolProp name="Assertion.assume_success">false</boolProp>
+              <intProp name="Assertion.test_type">16</intProp>
+            </ResponseAssertion>
+            <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T03_FilterProject" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T03_FilterProject">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
         <hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="004 /" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="004 /">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/</stringProp>
@@ -2911,10 +2931,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T04_OpenProject" enabled="true">
@@ -3001,10 +3021,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T05_ProjectbenefitArea" enabled="true">
@@ -3101,10 +3121,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <IfController guiclass="IfControllerPanel" testclass="IfController" testname="If Controller" enabled="true">
@@ -3655,10 +3675,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T07_ImportantDates" enabled="true">
@@ -3745,10 +3765,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T08_ImpDates_outlineStartdate" enabled="true">
@@ -3965,10 +3985,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T08_ImpDates_outlineCompletedate" enabled="true">
@@ -4185,10 +4205,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T08_ImpDates_Awardproject" enabled="true">
@@ -4405,10 +4425,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T08_ImpDates_Startwork" enabled="true">
@@ -4625,10 +4645,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T08_ImpDates_StartAchievingBenefits" enabled="true">
@@ -4845,10 +4865,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T08_ImpDates_StartSoonerDate" enabled="true">
@@ -5044,10 +5064,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T08_ImpDates_EarliestDate" enabled="true">
@@ -5390,10 +5410,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T09_FundSource&amp;Spend" enabled="true">
@@ -5480,10 +5500,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T09_FundSource&amp;Spend_ExpectedFunding" enabled="true">
@@ -5686,13 +5706,13 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T09_FundSource&amp;Spend_EstimatedSpend" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T09_FundSource&amp;Spend_EstimatedSpend">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
@@ -5948,10 +5968,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T10_RisksAndPropertiesBenfits" enabled="true">
@@ -6038,10 +6058,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T10_RisksAndPropertiesBenfits_Risks" enabled="true">
@@ -6244,10 +6264,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T10_RisksAndPropertiesBenfits_MainRisk" enabled="true">
@@ -6450,10 +6470,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T10_RisksAndPropertiesBenfits_AffectedProperties" enabled="true">
@@ -6670,10 +6690,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T10_RisksAndPropertiesBenfits_Percentage20Percent" enabled="true">
@@ -6869,10 +6889,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T10_RisksAndPropertiesBenfits_Percentage40Percent" enabled="true">
@@ -7068,10 +7088,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T10_RisksAndPropertiesBenfits_CurrentFloodRisk" enabled="true">
@@ -7267,10 +7287,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvironmentBenefits" enabled="true">
@@ -7357,10 +7377,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_EnvBenefit" enabled="true">
@@ -7556,10 +7576,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_intertidalWetland" enabled="true">
@@ -7755,13 +7775,13 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_HowmanyintertidalWetland" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_HowmanyintertidalWetland">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
@@ -7954,10 +7974,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_WoodlandHabitat" enabled="true">
@@ -8153,10 +8173,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_HowmanyWoodlandHabitat" enabled="true">
@@ -8352,10 +8372,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_wetwoodland" enabled="true">
@@ -8551,10 +8571,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_Howmanywetwoodland" enabled="true">
@@ -8750,10 +8770,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_wetlandOrWetGrassland" enabled="true">
@@ -8949,10 +8969,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_HowmanywetlandOrWetGrassland" enabled="true">
@@ -9148,10 +9168,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_GrasslandHabitate" enabled="true">
@@ -9347,10 +9367,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_HowmanyGrasslandHabitate" enabled="true">
@@ -9546,10 +9566,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_HealthlandHabitat" enabled="true">
@@ -9745,10 +9765,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_HowmanyHealthlandHabitat" enabled="true">
@@ -9944,10 +9964,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_PondOrLakeHabitat" enabled="true">
@@ -10143,10 +10163,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_HowmanyPondOrLakeHabitat" enabled="true">
@@ -10342,10 +10362,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_ArableLandHabitat" enabled="true">
@@ -10541,10 +10561,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_HowManyArableLandHabitat" enabled="true">
@@ -10740,10 +10760,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_Restoration" enabled="true">
@@ -10939,10 +10959,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_HowmanyRiverRestoration" enabled="true">
@@ -11138,10 +11158,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_PartialResotration" enabled="true">
@@ -11337,10 +11357,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_HowmanyPartialResotration" enabled="true">
@@ -11536,10 +11556,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_SingleMajorWaterHouse" enabled="true">
@@ -11735,10 +11755,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T11_EnvBenefits_HowmanyKMSingleMajorWaterHouse" enabled="true">
@@ -11934,10 +11954,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T12_ProjectsGoalsAndApproach" enabled="true">
@@ -12024,10 +12044,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T12_ProjectsGoalsAndApproach_EnterDetails" enabled="true">
@@ -12223,10 +12243,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T13_ProjectUrgenecy" enabled="true">
@@ -12313,10 +12333,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T13_ProjectUrgenecy_FollowingReasons" enabled="true">
@@ -12512,10 +12532,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T13_ProjectUrgenecy_BusinessName" enabled="true">
@@ -12718,10 +12738,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T14_ ConfidenceAssessment" enabled="true">
@@ -12808,10 +12828,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T14_ ConfidenceAssessment_NoOfProperties" enabled="true">
@@ -13007,13 +13027,13 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T14_ ConfidenceAssessment_ForcastGateway" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T14_ ConfidenceAssessment_ForcastGateway">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
@@ -13206,10 +13226,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T14_ ConfidenceAssessment_SecuringContributions" enabled="true">
@@ -13405,10 +13425,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T15_ NaturalFloodManagement" enabled="true">
@@ -13495,10 +13515,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T15_ NaturalFloodManagement_SelectedMeasures" enabled="true">
@@ -13701,10 +13721,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T15_ NaturalFloodManagement_RiverRestoration" enabled="true">
@@ -13907,10 +13927,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T15_ NaturalFloodManagement_LeakyBarriers" enabled="true">
@@ -14120,10 +14140,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T15_ NaturalFloodManagement_landusechange" enabled="true">
@@ -14326,10 +14346,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T15_ NaturalFloodManagement_arablefarmland" enabled="true">
@@ -14532,10 +14552,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T15_ NaturalFloodManagement_livestockfarmland" enabled="true">
@@ -14738,10 +14758,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T15_ NaturalFloodManagement_landownerconsent" enabled="true">
@@ -14937,10 +14957,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T15_ NaturalFloodManagement_Experience" enabled="true">
@@ -15136,10 +15156,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T15_ NaturalFloodManagement_ProjectReadiness" enabled="true">
@@ -15335,10 +15355,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T16_wholelifecost" enabled="true">
@@ -15425,10 +15445,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T16_wholelifecost_EstimatedCost" enabled="true">
@@ -15645,10 +15665,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T17_wholelifebenefits" enabled="true">
@@ -15735,10 +15755,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T17_wholelifebenefits_Estimated" enabled="true">
@@ -15962,10 +15982,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T18_CarbonImpact" enabled="true">
@@ -16130,10 +16150,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T18_CarbonImpact_Prepare" enabled="true">
@@ -16322,10 +16342,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T18_CarbonImpact_costbuilt" enabled="true">
@@ -16521,10 +16541,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T18_CarbonImpact_costoperation" enabled="true">
@@ -16720,10 +16740,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T18_CarbonImpact_wholelifecarbon" enabled="true">
@@ -16912,10 +16932,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T18_CarbonImpact_carboncostsequestered" enabled="true">
@@ -17111,10 +17131,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T18_CarbonImpact_carboncostsavoided" enabled="true">
@@ -17310,10 +17330,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T18_CarbonImpact_netcarbon" enabled="true">
@@ -17502,10 +17522,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T18_CarbonImpact_neteconomicbenefit" enabled="true">
@@ -17701,10 +17721,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T18_CarbonImpact_operationalcostforecast" enabled="true">
@@ -17900,10 +17920,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T18_CarbonImpact_carbonsummary" enabled="true">
@@ -18092,10 +18112,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T18_CarbonImpact_carbonimpactassessment" enabled="true">
@@ -18284,10 +18304,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T19_SubmitProposal " enabled="true">
@@ -18476,10 +18496,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">5000</stringProp>
+          <stringProp name="ActionProcessor.duration">10000</stringProp>
         </TestAction>
         <hashTree/>
         <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S02_ExistingProposal_T20_Logout " enabled="true">
@@ -18691,8 +18711,8 @@
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S03_AutoUserCreation">
         <intProp name="ThreadGroup.num_threads">2</intProp>
         <intProp name="ThreadGroup.ramp_time">20</intProp>
-        <longProp name="ThreadGroup.duration">4280</longProp>
-        <longProp name="ThreadGroup.delay">640</longProp>
+        <longProp name="ThreadGroup.duration">4620</longProp>
+        <longProp name="ThreadGroup.delay">1020</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -20439,8 +20459,8 @@
       <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="S04_GeneralUserCreation">
         <intProp name="ThreadGroup.num_threads">2</intProp>
         <intProp name="ThreadGroup.ramp_time">20</intProp>
-        <longProp name="ThreadGroup.duration">4280</longProp>
-        <longProp name="ThreadGroup.delay">640</longProp>
+        <longProp name="ThreadGroup.duration">4620</longProp>
+        <longProp name="ThreadGroup.delay">1030</longProp>
         <boolProp name="ThreadGroup.same_user_on_next_iteration">true</boolProp>
         <boolProp name="ThreadGroup.scheduler">true</boolProp>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
@@ -22759,10 +22779,10 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE" enabled="true">
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action PAUSE">
           <intProp name="ActionProcessor.action">1</intProp>
           <intProp name="ActionProcessor.target">0</intProp>
-          <stringProp name="ActionProcessor.duration">360000</stringProp>
+          <stringProp name="ActionProcessor.duration">36000</stringProp>
         </TestAction>
         <hashTree/>
       </hashTree>
