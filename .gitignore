@@ -17,4 +17,7 @@ reports/
 # Performance test seed tooling and local documentation — never committed
 generate-seed.js
 seed-perf-data.sql
+analysis_output/
+performance_results.xlsx
+analyse.py
 PERF-TESTING-GUIDE.md
