@@ -31,7 +31,7 @@ mkdir -p ${JM_REPORTS} ${JM_LOGS}
 # passed to JMeter via -q, which overrides the thread-group defaults embedded
 # in the JMX (s01.threads, s02.threads, etc.).
 #
-# If PROFILE is not set the JMX defaults apply (equivalent to peak_60).
+# If PROFILE is not set, test.jmx runs with 1 thread per scenario (~5 min).
 # ---------------------------------------------------------------------------
 PROFILE_OPTS=""
 if [ -n "${PROFILE}" ]; then
@@ -66,12 +66,13 @@ SERVICE_URL_SCHEME=${SERVICE_URL_SCHEME:-https}
 # Run the test suite
 # shellcheck disable=SC2086  — intentional word-splitting for PROFILE_OPTS
 jmeter -n -t ${SCENARIOFILE} -e -l "${REPORTFILE}" -o ${JM_REPORTS} -j ${LOGFILE} -f \
-${PROFILE_OPTS} \
--Jenv="${ENVIRONMENT}" \
--Jdomain="${SERVICE_ENDPOINT}" \
--Jport="${SERVICE_PORT}" \
--Jprotocol="${SERVICE_URL_SCHEME}" \
+  ${PROFILE_OPTS} \
+  -Jenv="${ENVIRONMENT}" \
+  -Jdomain="${SERVICE_ENDPOINT}" \
+  -Jport="${SERVICE_PORT}" \
+  -Jprotocol="${SERVICE_URL_SCHEME}"
 
+test_exit_code=$?
 
 # Publish the results into S3 so they can be displayed in the CDP Portal
 if [ -n "$RESULTS_OUTPUT_S3_PATH" ]; then
