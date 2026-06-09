@@ -39,8 +39,13 @@ if [ -n "${PROFILE}" ]; then
   if [ -f "${PROFILE_FILE}" ]; then
     echo "Using load profile: ${PROFILE} (${PROFILE_FILE})"
     PROFILE_OPTS="-q ${PROFILE_FILE}"
-    # Derive a sensible TEST_SCENARIO default when a profile is active
-    TEST_SCENARIO=${TEST_SCENARIO:-PAFS_PeakLoadTest_60Users}
+    # Select the matching JMX unless the caller has already set TEST_SCENARIO
+    if [ -z "${TEST_SCENARIO}" ]; then
+      case "${PROFILE}" in
+        peak_75) TEST_SCENARIO=PAFS_PeakLoadTest_75Users ;;
+        *)       TEST_SCENARIO=PAFS_PeakLoadTest_60Users ;;
+      esac
+    fi
   else
     echo "WARNING: Profile '${PROFILE}' not found at ${PROFILE_FILE} — falling back to JMX defaults"
   fi
