@@ -13,3 +13,8 @@ coverage
 jmeter.log
 report.csv
 reports/
+
+# Performance test seed tooling and local documentation — never committed
+generate-seed.js
+seed-perf-data.sql
+PERF-TESTING-GUIDE.md

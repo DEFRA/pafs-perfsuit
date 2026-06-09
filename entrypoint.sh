@@ -10,25 +10,58 @@ if [ -z "${JM_HOME}" ]; then
 fi
 
 JM_SCENARIOS=${JM_HOME}/scenarios
+JM_PROFILES=${JM_HOME}/profiles
 JM_REPORTS=${JM_HOME}/reports
 JM_LOGS=${JM_HOME}/logs
 
 mkdir -p ${JM_REPORTS} ${JM_LOGS}
 
+# ---------------------------------------------------------------------------
+# Profile-based load configuration
+#
+# Set the PROFILE env var in the CDP Portal at run time to select a load
+# profile without rebuilding the Docker image:
+#
+#   smoke     — 1 user/scenario, ~5 min  (quick sanity check)
+#   peak_60   — 60 concurrent users, ~75 min  (standard peak load)
+#   peak_75   — 75 concurrent users, ~75 min  (stretch peak load)
+#   soak      — 30 users, ~4 hours  (endurance / overnight)
+#
+# When PROFILE is set the corresponding profiles/<PROFILE>.properties file is
+# passed to JMeter via -q, which overrides the thread-group defaults embedded
+# in the JMX (s01.threads, s02.threads, etc.).
+#
+# If PROFILE is not set the JMX defaults apply (equivalent to peak_60).
+# ---------------------------------------------------------------------------
+PROFILE_OPTS=""
+if [ -n "${PROFILE}" ]; then
+  PROFILE_FILE="${JM_PROFILES}/${PROFILE}.properties"
+  if [ -f "${PROFILE_FILE}" ]; then
+    echo "Using load profile: ${PROFILE} (${PROFILE_FILE})"
+    PROFILE_OPTS="-q ${PROFILE_FILE}"
+    # Derive a sensible TEST_SCENARIO default when a profile is active
+    TEST_SCENARIO=${TEST_SCENARIO:-PAFS_PeakLoadTest_60Users}
+  else
+    echo "WARNING: Profile '${PROFILE}' not found at ${PROFILE_FILE} — falling back to JMX defaults"
+  fi
+fi
+
 TEST_SCENARIO=${TEST_SCENARIO:-test}
 SCENARIOFILE=${JM_SCENARIOS}/${TEST_SCENARIO}.jmx
-REPORTFILE=${NOW}-perftest-${TEST_SCENARIO}-report.csv
+REPORTFILE=${NOW}-perftest-${TEST_SCENARIO}-${PROFILE:-default}-report.csv
 LOGFILE=${JM_LOGS}/perftest-${TEST_SCENARIO}.log
 
 # Before running the suite, replace 'service-name' with the name/url of the service to test.
-# ENVIRONMENT is set to the name of th environment the test is running in.
+# ENVIRONMENT is set to the name of the environment the test is running in.
 SERVICE_ENDPOINT=${SERVICE_ENDPOINT:-service-name.${ENVIRONMENT}.cdp-int.defra.cloud}
 # PORT is used to set the port of this performance test container
 SERVICE_PORT=${SERVICE_PORT:-443}
 SERVICE_URL_SCHEME=${SERVICE_URL_SCHEME:-https}
 
 # Run the test suite
+# shellcheck disable=SC2086  — intentional word-splitting for PROFILE_OPTS
 jmeter -n -t ${SCENARIOFILE} -e -l "${REPORTFILE}" -o ${JM_REPORTS} -j ${LOGFILE} -f \
+${PROFILE_OPTS} \
 -Jenv="${ENVIRONMENT}" \
 -Jdomain="${SERVICE_ENDPOINT}" \
 -Jport="${SERVICE_PORT}" \

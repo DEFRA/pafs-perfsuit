@@ -2010,11 +2010,20 @@
               </collectionProp>
             </HeaderManager>
             <hashTree/>
+            <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extract new project reference" enabled="true">
+              <stringProp name="RegexExtractor.useHeaders">URL</stringProp>
+              <stringProp name="RegexExtractor.refname">C_newProjectRef</stringProp>
+              <stringProp name="RegexExtractor.regex">/project/([A-Z]{3}[0-9]{3}[A-Z]-[0-9]{3}[A-Z]-[0-9]{3}[A-Z])</stringProp>
+              <stringProp name="RegexExtractor.template">$1$</stringProp>
+              <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
+              <intProp name="RegexExtractor.match_number">1</intProp>
+            </RegexExtractor>
+            <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="019 /project/SWC501E-000A-001A" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="019 /project/${C_newProjectRef}" enabled="true">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
-            <stringProp name="HTTPSampler.path">/project/SWC501E-000A-001A</stringProp>
+            <stringProp name="HTTPSampler.path">/project/${C_newProjectRef}</stringProp>
             <stringProp name="HTTPSampler.method">GET</stringProp>
             <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
             <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
@@ -2151,7 +2160,7 @@
                 </elementProp>
                 <elementProp name="referer" elementType="Header">
                   <stringProp name="Header.name">referer</stringProp>
-                  <stringProp name="Header.value">https://pafs-portal-frontend.perf-test.cdp-int.defra.cloud/project/SWC501E-000A-001A</stringProp>
+                  <stringProp name="Header.value">https://pafs-portal-frontend.perf-test.cdp-int.defra.cloud/project/${C_newProjectRef}</stringProp>
                 </elementProp>
                 <elementProp name="sec-ch-ua" elementType="Header">
                   <stringProp name="Header.name">sec-ch-ua</stringProp>
