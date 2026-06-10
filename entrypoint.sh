@@ -25,6 +25,7 @@ mkdir -p ${JM_REPORTS} ${JM_LOGS}
 #   smoke     — 1 user/scenario, ~5 min  (quick sanity check)
 #   peak_60   — 60 concurrent users, ~75 min  (standard peak load)
 #   peak_75   — 75 concurrent users, ~75 min  (stretch peak load)
+#   peak_165  — 165 concurrent users, ~87 min (capacity-ceiling stress test)
 #   soak      — 30 users, ~4 hours  (endurance / overnight)
 #
 # When PROFILE is set the corresponding profiles/<PROFILE>.properties file is
@@ -42,8 +43,9 @@ if [ -n "${PROFILE}" ]; then
     # Select the matching JMX unless the caller has already set TEST_SCENARIO
     if [ -z "${TEST_SCENARIO}" ]; then
       case "${PROFILE}" in
-        peak_75) TEST_SCENARIO=PAFS_PeakLoadTest_75Users ;;
-        *)       TEST_SCENARIO=PAFS_PeakLoadTest_60Users ;;
+        peak_165) TEST_SCENARIO=PAFS_PeakLoadTest_75Users ;;
+        peak_75)  TEST_SCENARIO=PAFS_PeakLoadTest_75Users ;;
+        *)        TEST_SCENARIO=PAFS_PeakLoadTest_60Users ;;
       esac
     fi
   else

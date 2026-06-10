@@ -33,8 +33,8 @@ The suite contains four thread groups, each representing a distinct user journey
 
 | File | Purpose |
 |---|---|
-| `PAFS_PeakLoadTest_60Users.jmx` | Primary load test - 60 concurrent users (default) |
-| `PAFS_PeakLoadTest_75Users.jmx` | Stretch load test - 75 concurrent users |
+| `PAFS_PeakLoadTest_60Users.jmx` | Primary load test — used by `peak_60` (default) |
+| `PAFS_PeakLoadTest_75Users.jmx` | Stretch/stress load test — used by `peak_75` and `peak_165` |
 | `PAFS_SingleUserTest.jmx` | Single-user trace for manual script debugging |
 | `test.jmx` | Single-user baseline used for script validation |
 
@@ -63,27 +63,28 @@ Load profiles allow you to change the number of virtual users, ramp time, and te
 | Profile | Total users | Think time | Steady state | Approximate total run | Use case |
 |---|---|---|---|---|---|
 | `smoke` | 4 (1 per scenario) | 2 s | 5 min | ~6 min | Quick script sanity check |
-| `peak_60` | **60** | 10 s | 60 min | ~70 min | Standard peak load - validates capacity NFR (NF_CP_1) |
-| `peak_75` | **75** | 10 s | 60 min | ~72 min | Stretch peak - above-capacity stress test |
-| `soak` | 30 | 10 s | 4 hours | ~4 hr 5 min | Overnight endurance - detects memory leaks and connection pool exhaustion |
+| `peak_60` | **60** | 10 s | 60 min | ~70 min | Standard peak load — validates capacity NFR (NF_CP_1) |
+| `peak_75` | **75** | 10 s | 60 min | ~72 min | Stretch peak — above-capacity stress test |
+| `peak_165` | **165** | 10 s | 60 min | ~87 min | Capacity-ceiling stress test — requires `POSTGRES_POOL_MAX=100` |
+| `soak` | 30 | 10 s | 4 hours | ~4 hr 5 min | Overnight endurance — detects memory leaks and connection pool exhaustion |
 
 ### User distribution within each peak profile
 
 S02 starts immediately and carries the bulk of the load. S01, S03, and S04 are delayed to start after S02 has fully ramped, so the system is already under realistic concurrent load when the write-heavy and admin journeys begin.
 
-| Scenario | peak_60 users | peak_75 users | Ramp rate | Start delay (peak_60) |
-|---|---|---|---|---|
-| S01 - Create New Proposal | 3 | 4 | 10 s / user | After S02 fully ramped (~9 min) |
-| S02 - Existing Proposal | 54 | 67 | 10 s / user | Immediately (t=0) |
-| S03 - Auto User Creation | 2 | 2 | 10 s / user | After S02 fully ramped |
-| S04 - General User Creation | 2 | 2 | 10 s / user | After S02 fully ramped |
+| Scenario | peak_60 | peak_75 | peak_165 | Ramp rate | Start delay |
+|---|---|---|---|---|---|
+| S01 - Create New Proposal | 3 | 4 | 9 | 10 s / user | After S02 fully ramped |
+| S02 - Existing Proposal | 54 | 67 | 148 | 10 s / user | Immediately (t=0) |
+| S03 - Auto User Creation | 2 | 2 | 4 | 10 s / user | After S02 fully ramped |
+| S04 - General User Creation | 2 | 2 | 4 | 10 s / user | After S02 fully ramped |
 
 ### How to select a profile from the CDP Portal
 
 1. Go to **Test Suites** in the [CDP Portal](https://portal.cdp-int.defra.cloud/test-suites)
 2. Select `pafs-perfsuit`
 3. Press **Run** and choose the `perf-test` environment
-4. Under **Profile**, press **Yes** and enter one of: `smoke`, `peak_60`, `peak_75`, `soak`
+4. Under **Profile**, press **Yes** and enter one of: `smoke`, `peak_60`, `peak_75`, `peak_165`, `soak`
 5. Press **Start**
 
 No code change or Docker rebuild is needed.
@@ -97,6 +98,7 @@ profiles/
   smoke.properties
   peak_60.properties
   peak_75.properties
+  peak_165.properties
   soak.properties
 ```
 
@@ -129,9 +131,9 @@ s02.delay=0
 
 | Data item | Used by | Minimum rows needed | Notes |
 |---|---|---|---|
-| Regular user accounts (`perfuser*@yopmail.com`) | S01, S02 | 134 (10 + 124) | Non-admin RMA users, `admin = false`, `disabled = false` |
-| Admin user accounts (`perfadmin*@yopmail.com`) | S03, S04 | 10 (5 + 5) | `admin = true`, `disabled = false` |
-| Existing projects | S02 | 87 | Projects with reference numbers from `S02_ProjectNames.csv`, owned by S02 users and in a browseable state |
+| Regular user accounts (`perfuser*@yopmail.com`) | S01, S02 | 320 (20 + 300) | Non-admin RMA users, `admin = false`, `disabled = false`. Sized for `peak_165`; all lighter profiles use a subset. |
+| Admin user accounts (`perfadmin*@yopmail.com`) | S03, S04 | 20 (10 + 10) | `admin = true`, `disabled = false` |
+| Existing projects | S02 | 300 | Projects with reference numbers from `S02_ProjectNames.csv`, owned by S02 users, seeded with `project_type`, `earliest_start_year`, and `project_end_financial_year` |
 
 ### Data files in this repo
 
@@ -139,11 +141,11 @@ All CSV files live in `scenarios/` and are baked into the Docker image at build 
 
 | File | Rows | Contents |
 |---|---|---|
-| `S01_Credentials.csv` | 10 | `email,password` - regular RMA users for S01 |
-| `S02_Credentials.csv` | 124 | `email,password` - regular RMA users for S02 |
-| `S02_ProjectNames.csv` | 87 | Project reference numbers (e.g. `NWC501E-001A-883A`) for S02 to browse |
-| `S03_Credentials.csv` | 5 | `email,password` - admin users for S03 |
-| `S04_Credentials.csv` | 5 | `email,password` - admin users for S04 |
+| `S01_Credentials.csv` | 20 | `email,password` — regular RMA users for S01 |
+| `S02_Credentials.csv` | 300 | `email,password` — regular RMA users for S02 |
+| `S02_ProjectNames.csv` | 300 | Project slugs (e.g. `NWC501E-432A-001A`) generated per `RUN_ID` for S02 to browse |
+| `S03_Credentials.csv` | 10 | `email,password` — admin users for S03 |
+| `S04_Credentials.csv` | 10 | `email,password` — admin users for S04 |
 
 All accounts use the password `Password123!`. The bcrypt hash (12 rounds) is:
 
@@ -217,6 +219,26 @@ Before running `peak_60` or `peak_75`, always run `smoke` first:
 
 ---
 
+## Service Level Agreement (SLA)
+
+All performance profiles must meet the following NFRs under steady-state load:
+
+| NFR | Target | Metric |
+|---|---|---|
+| Page response time (95th percentile) | **≤ 2 s** | All page-level transactions under `peak_60` and `peak_75` |
+| Page response time (99th percentile) | **≤ 4 s** | Tail latency under `peak_60` and `peak_75` |
+| Error rate | **< 1%** | HTTP 4xx/5xx across all transactions in steady state |
+| Login transaction time (95th pct) | **≤ 2 s** | S01/S02 `/login` POST |
+| Dashboard load (95th pct) | **≤ 2 s** | `/` GET after login |
+| Project overview (95th pct) | **≤ 2 s** | `/project/{ref}` GET |
+| Form step save (95th pct) | **≤ 2 s** | Any `/project/{ref}/*` POST |
+| Submit proposal (95th pct) | **≤ 2 s** | `/project/{ref}/submit` POST |
+| Throughput consistency | No step-down in requests/sec during steady state | Indicates no memory leak |
+
+For `peak_165` (capacity-ceiling test), the SLA threshold relaxes to **≤ 3 s at 95th percentile** — this profile intentionally operates above rated capacity to locate the breaking point.
+
+---
+
 ## Running from the CDP Portal
 
 This is the primary way to run load tests against the `perf-test` environment.
@@ -226,7 +248,7 @@ This is the primary way to run load tests against the `perf-test` environment.
 3. Go to [CDP Portal - Test Suites](https://portal.cdp-int.defra.cloud/test-suites)
 4. Select `pafs-perfsuit`
 5. Choose the `perf-test` environment
-6. Optionally set a **Profile** value (`smoke`, `peak_60`, `peak_75`, `soak`)
+6. Optionally set a **Profile** value (`smoke`, `peak_60`, `peak_75`, `peak_165`, `soak`)
 7. Press **Run**
 8. When the run completes the portal shows pass/fail status and a link to the HTML report
 
@@ -312,7 +334,7 @@ docker run \
 | Variable | Default | Description |
 |---|---|---|
 | `ENVIRONMENT` | _(required)_ | Target environment name (`perf-test`, `local`). Set automatically by CDP. Used in logs and passed to JMeter as `-Jenv`. |
-| `PROFILE` | _(unset)_ | Load profile name. Loads `profiles/<PROFILE>.properties` via JMeter's `-q` flag. If unset, JMX-embedded defaults apply (equivalent to `peak_60`). |
+| `PROFILE` | _(unset)_ | Load profile name. One of `smoke`, `peak_60`, `peak_75`, `peak_165`, `soak`. Loads `profiles/<PROFILE>.properties` via JMeter's `-q` flag. If unset, JMX-embedded defaults apply (equivalent to `peak_60`). |
 | `TEST_SCENARIO` | `test` | JMX file name without extension. When a `PROFILE` is set this defaults to `PAFS_PeakLoadTest_60Users`. |
 | `SERVICE_ENDPOINT` | `service-name.<ENVIRONMENT>.cdp-int.defra.cloud` | Hostname of the service under test. |
 | `SERVICE_PORT` | `443` | Port of the service under test. |
@@ -325,25 +347,25 @@ docker run \
 
 These override the hardcoded defaults in the JMX `${__P(name,default)}` expressions.
 
-| Property | peak_60 default | Description |
-|---|---|---|
-| `think_time` | `10000` | Think time in ms between transactions |
-| `s01.threads` | `3` | Virtual users for S01 |
-| `s01.ramp` | `30` | Ramp-up time in seconds |
-| `s01.duration` | `3630` | Total group duration (ramp + 3600 s steady state) |
-| `s01.delay` | `540` | Startup delay in seconds |
-| `s02.threads` | `54` | Virtual users for S02 |
-| `s02.ramp` | `540` | Ramp-up time in seconds |
-| `s02.duration` | `4140` | Total group duration (ramp + 3600 s steady state) |
-| `s02.delay` | `0` | No delay - S02 starts immediately |
-| `s03.threads` | `2` | Virtual users for S03 |
-| `s03.ramp` | `20` | Ramp-up time in seconds |
-| `s03.duration` | `3620` | Total group duration |
-| `s03.delay` | `570` | Startup delay in seconds |
-| `s04.threads` | `2` | Virtual users for S04 |
-| `s04.ramp` | `20` | Ramp-up time in seconds |
-| `s04.duration` | `3620` | Total group duration |
-| `s04.delay` | `600` | Startup delay in seconds |
+| Property | peak_60 | peak_75 | peak_165 | Description |
+|---|---|---|---|---|
+| `think_time` | `10000` | `10000` | `10000` | Think time in ms between transactions |
+| `s01.threads` | `3` | `4` | `9` | Virtual users for S01 |
+| `s01.ramp` | `30` | `40` | `90` | Ramp-up time in seconds |
+| `s01.duration` | `3630` | `3640` | `3690` | Total group duration (ramp + 3600 s steady state) |
+| `s01.delay` | `540` | `670` | `1480` | Startup delay — waits for S02 to fully load |
+| `s02.threads` | `54` | `67` | `148` | Virtual users for S02 |
+| `s02.ramp` | `540` | `670` | `1480` | Ramp-up time in seconds (10 s/user) |
+| `s02.duration` | `4140` | `4270` | `5080` | Total group duration (ramp + 3600 s steady state) |
+| `s02.delay` | `0` | `0` | `0` | No delay — S02 starts immediately |
+| `s03.threads` | `2` | `2` | `4` | Virtual users for S03 |
+| `s03.ramp` | `20` | `20` | `20` | Ramp-up time in seconds |
+| `s03.duration` | `3620` | `3620` | `3620` | Total group duration |
+| `s03.delay` | `570` | `710` | `1570` | Startup delay in seconds |
+| `s04.threads` | `2` | `2` | `4` | Virtual users for S04 |
+| `s04.ramp` | `20` | `20` | `20` | Ramp-up time in seconds |
+| `s04.duration` | `3620` | `3620` | `3620` | Total group duration |
+| `s04.delay` | `600` | `730` | `1590` | Startup delay in seconds |
 
 ---
 

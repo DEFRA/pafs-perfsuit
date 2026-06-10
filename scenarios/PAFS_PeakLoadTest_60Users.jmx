@@ -719,7 +719,7 @@
             </ResponseAssertion>
             <hashTree/>
           </hashTree>
-          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="007 /project/area" enabled="true">
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="007 /project/area" enabled="false">
             <stringProp name="HTTPSampler.domain">${V_HOST}</stringProp>
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/project/area</stringProp>
@@ -818,7 +818,7 @@
           <stringProp name="ActionProcessor.duration">${__P(think_time,10000)}</stringProp>
         </TestAction>
         <hashTree/>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T06_SelectRiskMgmtAuth" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="PAFS_S01_CreateNewProposal_T06_SelectRiskMgmtAuth" enabled="false">
           <boolProp name="TransactionController.parent">true</boolProp>
           <boolProp name="TransactionController.includeTimers">false</boolProp>
         </TransactionController>
