@@ -2016,7 +2016,7 @@
             <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extract new project reference" enabled="true">
               <stringProp name="RegexExtractor.useHeaders">true</stringProp>
               <stringProp name="RegexExtractor.refname">C_newProjectRef</stringProp>
-              <stringProp name="RegexExtractor.regex">Location:.*?/project/([A-Z]{3}[0-9]{3}[A-Z]-[0-9]{3}[A-Z]-[0-9]{3}[A-Z])</stringProp>
+              <stringProp name="RegexExtractor.regex">(?i)Location:.*?/project/([A-Z]{3}[0-9]{3}[A-Z]-[0-9]{3}[A-Z]-[0-9]{3}[A-Z])</stringProp>
               <stringProp name="RegexExtractor.template">$1$</stringProp>
               <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
               <intProp name="RegexExtractor.match_number">1</intProp>
