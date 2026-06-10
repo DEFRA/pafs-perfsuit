@@ -1915,6 +1915,7 @@
             <stringProp name="HTTPSampler.protocol">${V_SCHEME}</stringProp>
             <stringProp name="HTTPSampler.path">/project/financial-end-year</stringProp>
             <stringProp name="HTTPSampler.method">POST</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">false</boolProp>
             <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
             <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
             <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
@@ -2022,9 +2023,9 @@
             </HeaderManager>
             <hashTree/>
             <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Extract new project reference" enabled="true">
-              <stringProp name="RegexExtractor.useHeaders">URL</stringProp>
+              <stringProp name="RegexExtractor.useHeaders">true</stringProp>
               <stringProp name="RegexExtractor.refname">C_newProjectRef</stringProp>
-              <stringProp name="RegexExtractor.regex">/project/([A-Z]{3}[0-9]{3}[A-Z]-[0-9]{3}[A-Z]-[0-9]{3}[A-Z])</stringProp>
+              <stringProp name="RegexExtractor.regex">Location:.*?/project/([A-Z]{3}[0-9]{3}[A-Z]-[0-9]{3}[A-Z]-[0-9]{3}[A-Z])</stringProp>
               <stringProp name="RegexExtractor.template">$1$</stringProp>
               <stringProp name="RegexExtractor.default">NOT_FOUND</stringProp>
               <intProp name="RegexExtractor.match_number">1</intProp>
